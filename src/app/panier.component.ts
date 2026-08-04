@@ -1,6 +1,6 @@
-import { CommonModule } from "@angular/common";
-import { Component, Input } from "@angular/core";
-import { Produit } from "./produit.model";
+import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
+import { Produit } from './produit.model';
 
 export interface LignePanier {
   produit: Produit;
@@ -8,14 +8,12 @@ export interface LignePanier {
 }
 
 @Component({
-  selector: "app-panier",
+  selector: 'app-panier',
   standalone: true,
   imports: [CommonModule],
   template: `
     <ul *ngIf="lignes.length; else panierVide">
-      <li *ngFor="let ligne of lignes">
-        {{ ligne.produit.nom }} × {{ ligne.quantite }}
-      </li>
+      <li *ngFor="let ligne of lignes">{{ ligne.produit.nom }} × {{ ligne.quantite }}</li>
     </ul>
     <ng-template #panierVide>
       <p>Votre panier est vide</p>

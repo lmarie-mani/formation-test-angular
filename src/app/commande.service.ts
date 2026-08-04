@@ -1,6 +1,6 @@
-import { HttpClient } from "@angular/common/http";
-import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 export interface LigneCommande {
   produitId: number;
@@ -15,9 +15,9 @@ export interface Commande {
   total: number;
 }
 
-@Injectable({ providedIn: "root" })
+@Injectable({ providedIn: 'root' })
 export class CommandeService {
-  private readonly apiUrl = "/api/commandes";
+  private readonly apiUrl = '/api/commandes';
 
   constructor(private http: HttpClient) {}
 

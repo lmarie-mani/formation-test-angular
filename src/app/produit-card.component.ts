@@ -1,9 +1,9 @@
-import { CommonModule } from "@angular/common";
-import { Component, EventEmitter, Input, Output } from "@angular/core";
-import { Produit } from "./produit.model";
+import { CommonModule } from '@angular/common';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Produit } from './produit.model';
 
 @Component({
-  selector: "app-produit-card",
+  selector: 'app-produit-card',
   standalone: true,
   imports: [CommonModule],
   template: `
@@ -14,9 +14,7 @@ import { Produit } from "./produit.model";
       <span *ngIf="stockFaible" class="badge-stock-faible">Stock faible</span>
       <span *ngIf="enRupture" class="badge-rupture">Rupture de stock</span>
 
-      <button type="button" [disabled]="enRupture" (click)="onAjouter()">
-        Ajouter au panier
-      </button>
+      <button type="button" [disabled]="enRupture" (click)="onAjouter()">Ajouter au panier</button>
     </article>
   `,
 })

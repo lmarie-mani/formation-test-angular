@@ -8,6 +8,8 @@ test('test2', async ({ page }) => {
   const page1Promise = page.waitForEvent('popup');
   await expect(page.getByRole('link', { name: 'Github' })).toBeVisible();
   const page1 = await page1Promise;
-  await expect(page1.locator('#repository-container-header')).toContainText('angular / angular Public');
+  await expect(page1.locator('#repository-container-header')).toContainText(
+    'angular / angular Public',
+  );
   await expect(page1).toHaveURL('https://github.com/angular/angular');
 });

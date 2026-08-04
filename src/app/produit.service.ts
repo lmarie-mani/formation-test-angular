@@ -1,11 +1,11 @@
-import { HttpClient } from "@angular/common/http";
-import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
-import { Produit } from "./produit.model";
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Produit } from './produit.model';
 
-@Injectable({ providedIn: "root" })
+@Injectable({ providedIn: 'root' })
 export class ProduitService {
-  private readonly apiUrl = "/api/produits";
+  private readonly apiUrl = '/api/produits';
 
   constructor(private http: HttpClient) {}
 
